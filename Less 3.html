@@ -1,0 +1,289 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Lesson 3 </title>
+    <style>
+        * {
+            font-family: Arial, Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .clearfix:after {
+            content: ".";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        h1 {
+            border-bottom: 4px solid #12dddd;
+            color: #808080;
+            margin-bottom: 5px;
+        }
+
+        table {
+            border-collapse: collapse;
+            border: 2px solid #ffffff;
+            width: 250px;
+            font-size: 15px;
+        }
+
+        th, td {
+            border: 1px solid #a3a3a3;
+        }
+
+        .tr-th-1 {
+            color: #0026ff;
+            height: 45px;
+            background-color: #dff8f8;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .tr-th-2 {
+            height: 15px;
+            color: #808080;
+            font-style: italic;
+            background-color: #dff8f8;
+            text-align: left;
+        }
+
+        .tr-td-first {
+            background-color: #dff8f8;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .tr-td-second {
+            text-align: right;
+            background-color: #7ac7ff;
+            height: 45px;
+        }
+
+        .div-jpn {
+            margin-top: 30px;
+            border: 1px solid #808080;
+            height: 100px;
+            width: 220px;
+        }
+        .jpn {
+            border-radius: 50%;
+            background-color: red;
+            margin: 12px auto;
+            height: 75px;
+            width: 75px;
+        }
+
+        .div-czh {
+            margin-top: 10px;
+            border: 1px solid #808080;
+            height: 110px;
+            width: 220px;
+        }
+        .div-czh .div1, .div-czh .div2 {
+                height: 110px;
+                width: 110px;
+                display: inline-block;
+                float: left;
+        }
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 110px solid #0026ff;
+            border-top: 55px solid transparent;
+            border-bottom: 55px solid transparent;
+            float: left;
+        }
+        .empt {
+            width: 110px;
+            height: 55px;
+        }
+        .triangle-down {
+            width: 0;
+            height: 0;
+            border-bottom: 55px solid red;
+            border-left: 110px solid transparent;
+        }
+        .rect {
+            width: 110px;
+            height: 55px;
+            background-color: red;
+        }
+
+        .wrap-for-box {
+            margin: 20px auto 0 auto;
+            border: 2px dashed #ff974d;
+            width: 200px;
+            height: 200px;
+        }
+        .box {
+            height: 50px;
+            width: 50px;
+            float: left;
+        }
+        .box1 {
+            background: #13c477;
+        }
+        .box2 {
+            background: #dea9d7;
+        }
+        .box3 {
+            background: #283cac;
+        }
+        .box4 {
+            background: #156d20;
+        }
+        .box5 {
+            background: #629cc7;
+        }
+        .box6 {
+            background: #4d0f0f;
+        }
+
+        .nav-but {
+            background: #000000;
+            width: 100%;        
+            height: 33px;        
+        }
+        ul {
+            margin:10px 0;
+            padding-left:0;            
+            line-height: 33px;           
+        }
+        .nav-but li {
+            display: inline-block;
+            margin-left: -6px;
+            border-right: 1px solid #808080;           
+            width: 85px;
+            text-align: center;         
+            cursor:pointer;  
+            position:relative;
+        }
+        .nav-but a {
+            text-decoration: none;
+            color: white;
+        }
+        .nav-but li:hover {
+            background: #0026ff;           
+        }
+
+        .ul-pulldown{
+             width:85px;
+             background-color: #000000;   
+             display:none;         
+             position:absolute;
+             left:0;
+             top:23px;               
+        }
+        .ul-pulldown li{
+            border-top: 1px solid #808080;        
+            margin-right:-6px;                              
+        }       
+        .ul-pulldown .pulldown-li:hover {
+            background:#8d0000;           
+        }       
+        .home:hover > ul {
+            display:block;                             
+        }       
+
+        .ul-pulldown-vertical{
+            display:none;
+            width:1180px;
+            background-color: #000000;
+            position:absolute;
+            left:0px;
+            top:23px;    
+            padding-left:6px;
+            text-align:left;           
+        }
+        .ul-pulldown-vertical .pulldown-li {           
+            border-bottom: 1px solid #808080;                              
+        }
+        .ul-pulldown-vertical .pulldown-li:hover{
+             background:#8d0000;    
+        }
+        .services:hover > ul {
+            display:block;                             
+        }       
+    </style>
+</head>
+<body>
+    <!-- display:inline-block; (margin-left:-4px) -->
+    <nav class="nav-but">
+        <ul>
+            <li class="home"><a href="#Home">Home</a>
+                <ul class="ul-pulldown">
+                    <li class="pulldown-li"><a href="#example">Example</a></li>
+                    <li class="pulldown-li"><a href="#example">For</a></li>
+                    <li class="pulldown-li"><a href="#example">My</a></li>
+                    <li class="pulldown-li"><a href="#example">Page</a></li>
+                    <li class="pulldown-li"><a href="#example">or</a></li>
+                    <li class="pulldown-li"><a href="#example">For</a></li>
+                    <li class="pulldown-li"><a href="#example">Other</a></li>
+                    <li class="pulldown-li"><a href="#example">User</a></li>
+                    <li class="pulldown-li"><a href="#example">Page</a></li>
+                </ul>
+            </li>
+            <li><a href="#About">About</a></li>
+            <li class="services"><a href="#Services">Services</a>
+                <ul class="ul-pulldown-vertical">
+                    <li class="pulldown-li"><a href="#example">Another</a></li>
+                    <li class="pulldown-li"><a href="#example">Example</a></li>
+                    <li class="pulldown-li"><a href="#example">For</a></li>
+                    <li class="pulldown-li"><a href="#example">Your</a></li>
+                    <li class="pulldown-li"><a href="#example">Attention</a></li>
+                    <li class="pulldown-li"><a href="#example">Dear</a></li>
+                    <li class="pulldown-li"><a href="#example">User</a></li>                    
+                </ul>
+            </li>
+            <li><a href="#Portfolio">Portfolio</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>       
+    </nav>    
+    <p>Some context here</p>
+    <h1>Oceans</h1>
+    <table>
+        <tr class="tr-th-1"><th></th><th>Area</th><th>Mean dept h</th></tr>
+        <tr class="tr-th-2"><th></th><th>million km<sup>2</sup></th><th>m</th></tr>
+        <tr><td class="tr-td-first">Arctic:</td><td class="tr-td-second">13,000</td><td class="tr-td-second">1,200</td></tr>
+        <tr><td class="tr-td-first">Atlantic:</td><td class="tr-td-second">87,000</td><td class="tr-td-second">3,900</td></tr>
+        <tr><td class="tr-td-first">Pacific:</td><td class="tr-td-second">180,000</td><td class="tr-td-second">4,000</td></tr>
+        <tr><td class="tr-td-first">Indian</td><td class="tr-td-second">75,000</td><td class="tr-td-second">3,900</td></tr>
+        <tr><td class="tr-td-first">Southern</td><td class="tr-td-second">20,000</td><td class="tr-td-second">4,500</td></tr>
+        <tr><td class="tr-th-1">Total:</td><td class="tr-td-second">361,000</td><td class="tr-td-second"></td></tr>
+        <tr><td class="tr-th-1">Mean:</td><td class="tr-td-second">72,000</td><td class="tr-td-second">3,800</td></tr>
+    </table>
+
+    <div class="div-jpn">
+        <div class="jpn"></div>
+    </div>
+    <div class="div-czh">
+        <div class="div1"><div class="triangle"></div><div class="empt"></div><div class="triangle-down"></div></div>
+        <div class="div2"><div class="empt"></div><div class="rect"></div></div>
+    </div>   
+    <div class="wrap-for-box clearfix">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+        <div class="box box5"></div>
+        <div class="box box5"></div>
+        <div class="box box6"></div>
+        <div class="box box4"></div>
+        <div class="box box3"></div>
+        <div class="box box2"></div>
+        <div class="box box1"></div>
+        <div class="box box5"></div>
+        <div class="box box6"></div>
+        <div class="box box4"></div>
+        <div class="box box1"></div>
+    </div>  
+
+</body>
+</html>
